@@ -1,0 +1,25 @@
+<h1>{{ show.charAt(0).toUpperCase() + show.slice(1) }}</h1>
+
+<div>
+  <img src="{{ data.sprites.front_default }}">
+  <ul style="list-style: none;">
+    <li ng-repeat="type in pokeTypes">{{ type.name }}</li>
+  </ul>
+</div>
+
+<h3>Evolution Chain</h3>
+<div ng-if="!chain">
+  No evolution chain found.
+</div>
+<div ng-if="chain.length > 0">
+  <ul style="list-style: none;">
+    <li ng-repeat="evolution in chain">
+      <a ng-if="evolution.name !== show" href="/#/pokemon/{{ evolution.name }}">
+        {{ evolution.name.charAt(0).toUpperCase() + evolution.name.slice(1) }}
+      </a>
+      <span ng-if="evolution.name === show" style="font-weight: bold">
+        {{ evolution.name.charAt(0).toUpperCase() + evolution.name.slice(1) }}
+      </span>
+    </li>
+  </ul>
+</div>

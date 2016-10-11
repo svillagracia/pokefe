@@ -1,0 +1,5 @@
+<ul>
+  <li ng-repeat="poke in pokemon">
+    <a href="/#/pokemon/{{ poke.name.toLowerCase() }}">{{ poke.name.charAt(0).toUpperCase() + poke.name.slice(1) }}</a>
+  </li>
+</ul>
