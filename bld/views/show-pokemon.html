@@ -2,7 +2,7 @@
 
 <div>
   <img src="{{ data.sprites.front_default }}">
-  <ul style="list-style: none;">
+  <ul>
     <li ng-repeat="type in pokeTypes">{{ type.name }}</li>
   </ul>
 </div>
@@ -12,7 +12,7 @@
   No evolution chain found.
 </div>
 <div ng-if="chain.length > 0">
-  <ul style="list-style: none;">
+  <ul>
     <li ng-repeat="evolution in chain">
       <a ng-if="evolution.name !== show" href="/#/pokemon/{{ evolution.name }}">
         {{ evolution.name.charAt(0).toUpperCase() + evolution.name.slice(1) }}

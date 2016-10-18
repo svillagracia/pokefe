@@ -1,3 +1,3 @@
 app.service('ShowService', ['$http', function ($http) {
-  console.log('ShowService loaded!')
+  console.log('ShowService loaded!', $http)
 }])

@@ -19,8 +19,8 @@ const gulp       = require('gulp')
 
 gulp.task('connect', () => {
   connect.server({
-    port: 3000,
-    livereload: true
+    livereload: true,
+    port: 3000
   })
 })
 
